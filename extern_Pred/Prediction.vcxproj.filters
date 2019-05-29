@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{af2fe1ae-45ea-4537-b135-791f147c37b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Typen">
+      <UniqueIdentifier>{ef229fd0-794f-43c6-a716-8587e95ae407}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prädiktoren">
+      <UniqueIdentifier>{16f1ca26-2d37-4173-a1fe-43456d35e402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prädiktoren\Funktionen">
+      <UniqueIdentifier>{43b15665-d02f-44a6-b3ed-e5b6953bad9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="prediction.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\auswahl.c">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\bias.c">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\block.c">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\context.c">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\errordb.c">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\predictor.c">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Module\predictors.c">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Typen\bild.c">
+      <Filter>Typen</Filter>
+    </ClCompile>
+    <ClCompile Include="Typen\data.c">
+      <Filter>Typen</Filter>
+    </ClCompile>
+    <ClCompile Include="Typen\parameter.c">
+      <Filter>Typen</Filter>
+    </ClCompile>
+    <ClCompile Include="Typen\seiteninfo.c">
+      <Filter>Typen</Filter>
+    </ClCompile>
+    <ClCompile Include="Praediktoren\cobalp.c">
+      <Filter>Prädiktoren</Filter>
+    </ClCompile>
+    <ClCompile Include="Praediktoren\plinear.c">
+      <Filter>Prädiktoren</Filter>
+    </ClCompile>
+    <ClCompile Include="Praediktoren\tmatching.c">
+      <Filter>Prädiktoren</Filter>
+    </ClCompile>
+    <ClCompile Include="Praediktoren\Funktionen\matrix.c">
+      <Filter>Prädiktoren\Funktionen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="prediction.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\auswahl.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\bias.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\block.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\context.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\errordb.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\predictor.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Module\predictors.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Typen\bild.h">
+      <Filter>Typen</Filter>
+    </ClInclude>
+    <ClInclude Include="Typen\data.h">
+      <Filter>Typen</Filter>
+    </ClInclude>
+    <ClInclude Include="Typen\parameter.h">
+      <Filter>Typen</Filter>
+    </ClInclude>
+    <ClInclude Include="Typen\seiteninfo.h">
+      <Filter>Typen</Filter>
+    </ClInclude>
+    <ClInclude Include="Typen\types.h">
+      <Filter>Typen</Filter>
+    </ClInclude>
+    <ClInclude Include="Praediktoren\cobalp.h">
+      <Filter>Prädiktoren</Filter>
+    </ClInclude>
+    <ClInclude Include="Praediktoren\plinear.h">
+      <Filter>Prädiktoren</Filter>
+    </ClInclude>
+    <ClInclude Include="Praediktoren\tmatching.h">
+      <Filter>Prädiktoren</Filter>
+    </ClInclude>
+    <ClInclude Include="Praediktoren\Funktionen\matrix.h">
+      <Filter>Prädiktoren\Funktionen</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

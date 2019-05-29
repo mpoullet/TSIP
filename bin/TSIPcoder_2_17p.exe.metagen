@@ -1,0 +1,106 @@
+  bacoder.AboutForm.resources - Embedded, ContainedInManifestFile, 
+  bacoder.ConfigForm.resources - Embedded, ContainedInManifestFile, 
+  bacoder.CtxForm.resources - Embedded, ContainedInManifestFile, 
+  bacoder.ExternalPrediction.resources - Embedded, ContainedInManifestFile, 
+  bacoder.Form1.resources - Embedded, ContainedInManifestFile, 
+  bacoder.H26xConfigForm.resources - Embedded, ContainedInManifestFile, 
+  bacoder.ProgressForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly TSIPcoder_2_17p, Version=0.0.*, Culture=Invariante Sprache (Invariantes Land): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class bacoder.ProgressForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    BeginClose(): PrivateScope, Public, HideBySig
+Class bacoder.ConfigForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32 maxTileWidth : Public
+    UInt32 maxTileHeight : Public
+    UInt32 result : Public
+    PicData* curpic : Public
+    AutoConfig* autoC : Public
+    ImageFeatures* imageF : Public
+    System.Windows.Forms.CheckBox checkBoxLogFile : Public
+    System.Windows.Forms.TextBox textBoxLogFile : Public
+    System.String changedfile : Public
+  Methods:
+    InsertRCT(AutoConfig*): PrivateScope, Public, HideBySig
+    InsertParams(PicData*, String, ImageFeatures*, AutoConfig*, UInt32): PrivateScope, Public, HideBySig
+Class bacoder.AboutForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class bacoder.ExternalPrediction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean result : Public
+    Boolean* pred : Public
+    Boolean* bias : Public
+    UInt32 bw : Public
+    UInt32 bh : Public
+    UInt32 cxPx : Public
+    UInt32 cxGrad : Public
+    System.String ctxfile : Public
+    Boolean blockmode : Public
+    Boolean meanmode : Public
+    Boolean isctxfile : Public
+    UInt32 sigma : Public
+  Methods:
+    InsertParams(CustomParam*): PrivateScope, Public, HideBySig
+    GetExternParams(CustomParam*): PrivateScope, Public, Static, HideBySig
+Class bacoder.CtxForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SByte* filename : Public
+Class bacoder.ReduceForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    PicData* picdata : Public
+    UInt32* colourReduction : Public
+  Methods:
+    InsertParams(PicData*, UInt32*): PrivateScope, Public, HideBySig
+Class bacoder.H26xConfigForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    initConfiguration(H26xConfiguration*): PrivateScope, Public, HideBySig
+    setConfiguration(): PrivateScope, Public, HideBySig
+    getConfiguration(H26xConfiguration*): PrivateScope, Public, HideBySig
+Class bacoder.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Bitmap formImage : Public
+    PicData* picdata : Public
+    bacoder.ProgressForm prg : Public
+    bacoder.ConfigForm cfg : Public
+    bacoder.CtxForm ctxform : Public
+    bacoder.H26xConfigForm H26xConfig : Public
+    bacoder.AboutForm aboutfrm : Public
+    bacoder.ReduceForm reducefrm : Public
+    System.String inFilename : Public
+    System.String outFilename : Public
+    System.String rct_string : Public
+  Methods:
+    thfunc(): PrivateScope, Public, HideBySig
+    thend(): PrivateScope, Public, HideBySig
+    CheckError(SByte*): PrivateScope, Public, HideBySig
+    setImageOfPictureBox1(Image): PrivateScope, Public, HideBySig
+    setBackgroundOfPictureBox1(Image): PrivateScope, Public, HideBySig

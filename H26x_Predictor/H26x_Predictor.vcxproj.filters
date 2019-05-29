@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="H.26x Prädiktion">
+      <UniqueIdentifier>{dca85d8e-effb-4266-af16-3d8cc7996381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="5/3 Lifting">
+      <UniqueIdentifier>{4b6dc467-f718-4a89-8bd2-a580ad3bfcb0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\includes\H26x_Config.h">
+      <Filter>H.26x Prädiktion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\H26x_Logging.h">
+      <Filter>H.26x Prädiktion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\H26x_Prediction.h">
+      <Filter>H.26x Prädiktion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\iwt.h">
+      <Filter>5/3 Lifting</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\H26x_Prediction.c">
+      <Filter>H.26x Prädiktion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\H26x_Utility.c">
+      <Filter>H.26x Prädiktion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\5_3_Lifting.c">
+      <Filter>5/3 Lifting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\f_2D_53R_control_L.c">
+      <Filter>5/3 Lifting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\f_5_3R_control.c">
+      <Filter>5/3 Lifting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_2D_53R_control_L.c">
+      <Filter>5/3 Lifting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_5_3R_control.c">
+      <Filter>5/3 Lifting</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

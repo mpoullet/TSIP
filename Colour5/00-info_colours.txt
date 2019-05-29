@@ -1,0 +1,127 @@
+/*           old 		new shiftIdx
+#define	A1_1	2	  /*	2		0				G			R-G	B-G						A2	4	*/	
+#define	A2_1	14	/*	3		1				R			R-G	B-G	*/			
+#define	A3_1	26	/*	4		2				B			R-G	B-G	*/			
+#define	A4_1	38	/*	5		3				(G+R)/2	R-G	B-G	*/			
+#define	A5_1	50	/*	6		4				(G+B)/2	R-G	B-G	*/			
+#define	A6_1	62	/*	7		5				(R+B)/2	R-G	B-G	*/			
+#define	A7_1	74	/*	8		6				(R+2G+B)/4	R-G	B-G	*/	/*	YUVr	*/
+#define	A8_1	86	/*	9		7				(2R+G+B)/4	R-G	B-G	*/			
+#define	A9_1	98	/*	10	8				(R+G+2B)/4	R-G	B-G	*/			
+
+#define	A1_10	11	/*	11	9				G					R-G	B-(R+G)/2			*/	
+#define	A2_10	23	/*	12	10			R					R-G	B-(R+G)/2			*/	
+#define	A3_10	35	/*	13	11			B					R-G	B-(R+G)/2			*/	
+#define	A4_10	47	/*	14	12			(G+R)/2		R-G	B-(R+G)/2	*/			
+#define	A5_10	59	/*	15	13			(G+B)/2		R-G	B-(R+G)/2	*/			
+#define	A6_10	71	/*	16	14			(R+B)/2		R-G	B-(R+G)/2	*/			
+#define	A7_10	83	/*	17	15			(R+2G+B)/4	R-G	B-(R+G)/2			*/	
+#define	A8_10	95	/*	18	16			(2R+G+B)/4	R-G	B-(R+G)/2			*/	
+#define	A9_10	107	/*	19	17			(R+G+2B)/4	R-G	B-(R+G)/2			*/		
+
+#define	A1_4	5		/*	20	18			G				R-G	B-(R+3G)/4	*/	
+#define	A2_4	17	/*	21	19			R				R-G	B-(R+3G)/4		*/	
+#define	A3_4	29	/*	22	20			B				R-G	B-(R+3G)/4	*/			
+#define	A4_4	41	/*	23	21			(G+R)/2	R-G	B-(R+3G)/4	*/			
+#define	A5_4	53	/*	24	22			(G+B)/2	R-G	B-(R+3G)/4	*/			
+#define	A6_4	65	/*	25	23			(R+B)/2	R-G	B-(R+3G)/4	*/			
+#define	A7_4	77	/*	26	24			(R+2G+B)/4	R-G	B-(R+3G)/4		*/	
+#define	A8_4	89	/*	27	25			(2R+G+B)/4	R-G	B-(R+3G)/4	*/		
+#define	A9_4	101	/*	28	26			(R+G+2B)/4	R-G	B-(R+3G)/4	*/			
+
+/* permutation R<=>G	*/
+#define	A2_2	15	/*	29	0			R				G-R	B-R	*/	
+#define	A1_2	3		/*	30	1			G				G-R	B-R	*/			
+#define	A3_2	27	/*	31	2			B				G-R	B-R	*/			
+#define	A4_2	39	/*	32	3			(R+G)/2	G-R	B-R	*/			
+#define	A6_2	63	/*	33	4			(R+B)/2	G-R	B-R	*/			
+#define	A5_2	51	/*	34	5			(G+B)/2	G-R	B-R	*/			
+#define	A8_2	87	/*	35	6			(2R+G+B)/4	G-R	B-R		*/	
+#define	A7_2	75	/*	36	7			(R+2G+B)/4	G-R	B-R	*/			
+#define	A9_2	99	/*	37	8			(R+G+2B)/4	G-R	B-R	*/			
+
+#define	A2_5	18	/*	38	18			R					G-R	B-(G+3R)/4	*/	
+#define	A1_5	6		/*	39	19			G					G-R	B-(G+3R)/4	*/	
+#define	A3_5	30	/*	40	20			B					G-R	B-(G+3R)/4	*/			
+#define	A4_5	42	/*	41	21		(G+R)/2			G-R	B-(G+3R)/4	*/			
+#define	A6_5	66	/*	42	22		(R+B)/2			G-R	B-(G+3R)/4	*/			
+#define	A5_5	54	/*	43	23		(G+B)/2			G-R	B-(G+3R)/4	*/			
+#define	A8_5	90	/*	44	24		(2R+G+B)/4	G-R	B-(G+3R)/4	*/	
+#define	A7_5	78	/*	45	25		(R+2G+B)/4	G-R	B-(G+3R)/4	*/	
+#define	A9_5	102	/*	46	26		(R+G+2B)/4	G-R	B-(G+3R)/4	*/			
+
+/* permutation B<=>G	*/
+#define	A3_3	28	/*	47	0			B					R-B	G-B	*/	
+#define	A2_3	16	/*	48	1			R					R-B	G-B	*/			
+#define	A1_3	4		/*	49	2			G					R-B	G-B	*/			
+#define	A6_3	64	/*	50	3			(R+B)/2		R-B	G-B	*/			
+#define	A5_3	52	/*	51	4			(G+B)/2		R-B	G-B	*/			
+#define	A4_3	40	/*	52	5			(G+R)/2		R-B	G-B	*/			
+#define	A9_3	100	/*	53	6			(R+G+2B)/4	R-B	G-B		*/	
+#define	A8_3	88	/*	54	7			(2R+G+B)/4	R-B	G-B	*/			
+#define	A7_3	76	/*	55	8			(R+2G+B)/4	R-B	G-B	*/			
+
+#define	A3_11	36	/*	56	9			B					R-B	G-(R+B)/2		*/	
+#define	A2_11	24	/*	57	10		R					R-B	G-(R+B)/2		*/	
+#define	A1_11	12	/*	58	11		G					R-B	G-(R+B)/2		*/	
+#define	A6_11	72	/*	59	12		(R+B)/2		R-B	G-(R+B)/2	*/			
+#define	A5_11	60	/*	60	13		(G+B)/2		R-B	G-(R+B)/2	*/			
+#define	A4_11	48	/*	61	14		(G+R)/2		R-B	G-(R+B)/2	*/			
+#define	A9_11	108	/*	62	15		(R+G+2B)/4	R-B	G-(R+B)/2	*/			
+#define	A8_11	96	/*	63	16		(2R+G+B)/4	R-B	G-(R+B)/2		*/			
+#define	A7_11	84	/*	64	17		(R+2G+B)/4	R-B	G-(R+B)/2	    YcgCoR*/			
+
+#define	A3_6	31	/*	65	18		B					R-B	G-(R+3B)/4	*/	
+#define	A2_6	19	/*	66	19		R					R-B	G-(R+3B)/4	*/	
+#define	A1_6	7		/*	67	20		G					R-B	G-(R+3B)/4	*/			
+#define	A6_6	67	/*	68	21		(R+B)/2		R-B	G-(R+3B)/4	*/			
+#define	A5_6	55	/*	69	22		(G+B)/2		R-B	G-(R+3B)/4	*/			
+#define	A4_6	43	/*	70	23		(G+R)/2		R-B	G-(R+3B)/4	*/			
+#define	A9_6	103	/*	71	24		(R+G+2B)/4	R-B	G-(R+3B)/4	*/			
+#define	A8_6	91	/*	72	25		(2R+G+B)/4	R-B	G-(R+3B)/4	*/			
+#define	A7_6	79	/*	73	26		(R+2G+B)/4	R-B	G-(R+3B)/4	*/			
+
+
+/* permutation R<=>B	*/
+#define	A1_12	13	/*	74	9			G					B-G	R-(B+G)/2	*/	
+#define	A3_12	37	/*	75	10		B					B-G	R-(B+G)/2	*/	
+#define	A2_12	25	/*	76	11		R					B-G	R-(B+G)/2	*/	
+#define	A5_12	61	/*	77	12		(G+B)/2		B-G	R-(B+G)/2	*/			
+#define	A4_12	49	/*	78	13		(G+R)/2		B-G	R-(B+G)/2	*/			
+#define	A6_12	73	/*	79	14		(R+B)/2		B-G	R-(B+G)/2	*/			
+#define	A7_12	85	/*	80	15		(R+2G+B)/4	B-G	R-(B+G)/2	*/	
+#define	A9_12	109	/*	81	16		(R+G+2B)/4	B-G	R-(B+G)/2	*/
+#define	A8_12	97	/*	82	17		(2R+G+B)/4	B-G	R-(B+G)/2	*/	
+
+#define	A1_7	8		/*	83	18		G					B-G	R-(B+3G)/4	*/	
+#define	A3_7	32	/*	84	19		B					B-G	R-(B+3G)/4	*/	
+#define	A2_7	20	/*	85	20		R					B-G	R-(B+3G)/4	*/			
+#define	A5_7	56	/*	86	21		(G+B)/2		B-G	R-(B+3G)/4	*/			
+#define	A4_7	44	/*	87	22		(G+R)/2		B-G	R-(B+3G)/4	*/			
+#define	A6_7	68	/*	88	23		(R+B)/2		B-G	R-(B+3G)/4	*/			
+#define	A7_7	80	/*	89	24		(R+2G+B)/4	B-G	R-(B+3G)/4	*/	
+#define	A9_7	104	/*	90	25		(R+G+2B)/4	B-G	R-(B+3G)/4	*/			
+#define	A8_7	92	/*	91	26		(2R+G+B)/4	B-G	R-(B+3G)/4	*/			
+
+/* permutation R=>G=>B=>R	*/
+#define	A3_8	33	/*	92	18		B					G-B	R-(G+3B)/4	*/	
+#define	A1_8	9		/*	93	19		G					G-B	R-(G+3B)/4	*/	
+#define	A2_8	21	/*	94	20		R					G-B	R-(G+3B)/4	*/			
+#define	A5_8	57	/*	95	21		(G+B)/2		G-B	R-(G+3B)/4	*/			
+#define	A6_8	69	/*	96	22		(R+B)/2		G-B	R-(G+3B)/4	*/			
+#define	A4_8	45	/*	97	23		(G+R)/2		G-B	R-(G+3B)/4	*/			
+#define	A9_8	105	/*	98	24		(R+G+2B)/4	G-B	R-(G+3B)/4	*/			
+#define	A7_8	81	/*	99	25		(R+2G+B)/4	G-B	R-(G+3B)/4	*/	
+#define	A8_8	93	/*	100	26		(2R+G+B)/4	G-B	R-(G+3B)/4	*/			
+
+/* permutation R=>B=>G=>R	*/
+#define	A2_9	22	/*	101	18		R					B-R	G-(B+3R)/4	*/	
+#define	A3_9	34	/*	102	19		B					B-R	G-(B+3R)/4	*/	
+#define	A1_9	10	/*	103	20		G					B-R	G-(B+3R)/4	*/		
+#define	A6_9	70	/*	104	21		(R+B)/2		B-R	G-(B+3R)/4	*/			
+#define	A4_9	46	/*	105	22		(G+R)/2		B-R	G-(B+3R)/4	*/			
+#define	A5_9	58	/*	106	23		(G+B)/2		B-R	G-(B+3R)/4	*/			
+#define	A8_9	94	/*	107	24		(2R+G+B)/4	B-R	G-(B+3R)/4	*/			
+#define	A9_9	106	/*	108	25		(R+G+2B)/4	B-R	G-(B+3R)/4		*/			
+#define	A7_9	82	/*	109	26		(R+2G+B)/4	B-R	G-(B+3R)/4	*/			
+

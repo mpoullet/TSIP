@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Codec">
+      <UniqueIdentifier>{e8543b0a-c3c5-44d5-b489-dc09224d28d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extern_Pred">
+      <UniqueIdentifier>{cafde313-d975-41a7-9ed8-c74f305d36c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HXCcoder">
+      <UniqueIdentifier>{565a44a5-c609-4028-bebc-54b82ab58618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CoBaLP">
+      <UniqueIdentifier>{39d50d82-84a8-4855-89d5-9a2c19e3369a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BPcoder">
+      <UniqueIdentifier>{60bf500b-5e65-4d74-a793-3450a78ef792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LOCO">
+      <UniqueIdentifier>{9476afc2-0475-4eff-a569-c551ad7e74e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Predictors">
+      <UniqueIdentifier>{45e84b3e-49ad-444b-8830-b37e71cca216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TSIP">
+      <UniqueIdentifier>{d7debf69-938a-4c85-8a83-c36c8df85281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="K-Opt">
+      <UniqueIdentifier>{1d5a89cb-de69-4008-aa63-8d37f95883da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SCF">
+      <UniqueIdentifier>{331d8cf2-2c52-4d0c-b11c-a38e060215b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LSapproximation">
+      <UniqueIdentifier>{120fa4de-f5ba-4ae3-ae6e-922b044e4898}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutForm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="adjmap.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmeticB.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="bacoder.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CLI.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigForm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CtxForm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EigenSolver\eig3.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ExternalPrediction.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="fileIO.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Form1.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="H26xConfigForm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="pdconvert.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="plist.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="png_reader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressForm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ReduceForm.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="autoConfig.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="bitbuf.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="check_dependencies.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_d.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="codec_e.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4\colour4_f.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4\colour4_i.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4modulo\colour4m_f.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4modulo\colour4m_i.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="compact_histogram.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="externpred.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="fibocode.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4\find_colourspace4.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4modulo\find_colourspace4m.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4\find_colourspace5.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="getImageFeatures.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="getTileSize.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="ginterface.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="huff.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EigenSolver\matrix_utils.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Colour4\median.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryUsage.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="palette_coding.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="permute_histogram.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="read_header.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="stats.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="tiles.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="write_header.c">
+      <Filter>Codec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AC\arithmetic.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\context_quant.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\copy_pattern.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\get_distribution.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\get_distribution2.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\get_distribution_Idx.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\getHXC2_tolerances.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\getHXC2_tolerances_2.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\hist_ops.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\hist_ops2.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\hxc.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\hxc2.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\hxcIdx.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\loco_vector_pred.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\pattern_list_ops.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HXCcoder\pattern_list_ops2.c">
+      <Filter>HXCcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\analysis.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="cobalpWrapper.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\contexts.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\contextsLS.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\decoder.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\encoder.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\estimate_noise_.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\get_AC_thresholds.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\med_.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\meta_predictor.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\predictor2.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\predictorCM.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\predictorLS.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\predictorMult.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\predictorR.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\predictorTM.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\refine_residual.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CoBaLP2\verbose.c">
+      <Filter>CoBaLP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BitPlaneCoder\BP_coding.cpp">
+      <Filter>BPcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BitPlaneCoder\BP_utility.cpp">
+      <Filter>BPcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BitPlaneCoder\QM_decode.cpp">
+      <Filter>BPcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BitPlaneCoder\QM_encode.cpp">
+      <Filter>BPcoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LOCO-I\loco_d.c">
+      <Filter>LOCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LOCO-I\loco_e.c">
+      <Filter>LOCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LOCO-I\loco_init.c">
+      <Filter>LOCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LOCO-I\loco_predictor.c">
+      <Filter>LOCO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\leastMeanSquaresPred.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\leastMeanSquaresPredCol.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\leastMeanSquaresPredColP.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\leastSquaresPred.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\leastSquaresZerorOrderPred.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\leftNeighbourPred.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\med.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\med_paeth.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Predictors\paeth.c">
+      <Filter>Predictors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\get_distribution3.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\hist_ops3.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\hxc3.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\ifc.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\pattern_list_ops3.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\TSIP_dec.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\TSIP_enc.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\ubwt.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\umtf.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TSIP\urle.c">
+      <Filter>TSIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\K-Opt\k_opt_heuristic.c">
+      <Filter>K-Opt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\K-Opt\tour_manip.c">
+      <Filter>K-Opt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\K-Opt\two_opt_heuristic.c">
+      <Filter>K-Opt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SCF\get_distribution_SCF.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SCF\getSCF_tolerances.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SCF\hist_ops_SCF.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SCF\pattern_list_ops_SCF.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="quadtree.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SCF\quadtree_structure.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="rotateImage.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SCF\scf.c">
+      <Filter>SCF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LSapproximation\errmsg.c">
+      <Filter>LSapproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LSapproximation\ls_lin.c">
+      <Filter>LSapproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LSapproximation\singvaldec.c">
+      <Filter>LSapproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LSapproximation\solve_lin.c">
+      <Filter>LSapproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LSapproximation\svd_inversion.c">
+      <Filter>LSapproximation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutForm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="adjmap.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmeticB.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CLI.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigForm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CtxForm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EigenSolver\errmsg.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternalPrediction.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="fileIO.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Form1.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="glue.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\H26x_Prediction.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="H26xConfigForm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EigenSolver\macros.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EigenSolver\matrix_utils.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="pdconvert.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="plist.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="progress.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressForm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EigenSolver\prototypes.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ReduceForm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extern_Pred\Typen\types.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="autoConfig.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="bitbuf.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Colour4\colour4.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Colour4modulo\colour4m.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EigenSolver\eig3.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="image.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="imageFeatures.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryUsage.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="palette.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="tile.h">
+      <Filter>Codec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extern_Pred\prediction.h">
+      <Filter>extern_Pred</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AC\arithmetic.h">
+      <Filter>HXCcoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HXCcoder\hxc.h">
+      <Filter>HXCcoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\codec_CoBaLP.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\compaction.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\contexts.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\meta_predictor.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\predictor2.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\predictorTM.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\types_CoBaLP.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BitPlaneCoder\BP.h">
+      <Filter>BPcoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BitPlaneCoder\qm_coder.h">
+      <Filter>BPcoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LOCO-I\loco.h">
+      <Filter>LOCO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Predictors\leastSquaresPred.h">
+      <Filter>Predictors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Predictors\leftneighbour.h">
+      <Filter>Predictors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Predictors\med.h">
+      <Filter>Predictors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Predictors\med_proto.h">
+      <Filter>Predictors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Predictors\med_types.h">
+      <Filter>Predictors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Predictors\paeth.h">
+      <Filter>Predictors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TSIP\hxc3.h">
+      <Filter>TSIP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TSIP\ifc.h">
+      <Filter>TSIP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TSIP\ubwt.h">
+      <Filter>TSIP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TSIP\umtf.h">
+      <Filter>TSIP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TSIP\urle.h">
+      <Filter>TSIP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\K-Opt\k-opt.h">
+      <Filter>K-Opt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SCF\scf.h">
+      <Filter>SCF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LSapproximation\macros.h">
+      <Filter>LSapproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LSapproximation\matrix_utils.h">
+      <Filter>LSapproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CoBaLP2\med_.h">
+      <Filter>CoBaLP</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.ico">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc">
+      <Filter>Ressourcendateien</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="codec.h">
+      <Filter>Codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="externpred.h">
+      <Filter>Codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="fibocode.h">
+      <Filter>Codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ginterface.h">
+      <Filter>Codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="huff.h">
+      <Filter>Codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="stats.h">
+      <Filter>Codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tstypes.h">
+      <Filter>Codec</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutForm.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtxForm.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalPrediction.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resX">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="H26xConfigForm.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,113 @@
+Stadardmäßig schreibt TSIPcoder Informationen über das komprimierte Bild in eine Datei log_TSIP.txt. Ab Version 1.28o gilt folgende Zuordnung.
+
+Die ersten Spalten sind immer:
+0.version	Version von TSIPcoder, wurden die automatischen Optionen nicht verändert, steht noch 'AUTO'
+__image		Bildname
+width	height	Breite und Höhe des Bildes
+Colours		Anzahl der Farben im Bild
+Sy		syntheticness (0...200, wie synthetisch ist das Bild?)
+Ro		Roughness
+Corr		Correlation
+Mon		Monotony
+Mod		Modality (0..200, wie hoch ist der Anteil einer einzelnen Farbe?)
+Noi		Rauschanteil
+C/N		Anzahl Farben / Anzahl Bildpunkte
+constance	Anteil konstanter Signalwerte
+ColSat		Farbsättigung
+ColCon		Farbkontrast (Wie stark ändert sich die Farbe von einem Bildpunkt zum nächsten?)
+stdDev0		Standardabweichung der Daten im RGB-Farbwürfel
+stdDev1
+stdDev2
+repeatness	immer 0
+transparence	0 ... keine Transparenz, 1... Graustufenbild mit binärer Transp.
+		2 ... Farbbild mit Alpha-Kanal	
+----------------------------------- Ende der Bildeigenschaften ------------
+Bytes		Größe der ausgegebenen Datei
+Bitrate		bpp
+sec		Dauer der Kompression
+RCT		verwendeter Farbraum / Farb-Indizierung
+Method		verwendete Kompressionsmethode
+histMode	Histogramm-Modifikation
+Predictor	verwendete Prädiktionsmethode
+----------------------------------------------------------
+
+Danach hängen die Ausgaben von der Kompressionsmethode ab.
+
+HXC:
+-----
+Tol.		Toleranz (für Pattern-Element A und B) bei Suche nach passenden Muster
+Off1		Toleranz für Pattern-Element C und D = Tol + Off1
+Off2		Toleranz für Pattern-Element E und F = Tol + Off1 + Off2
+Incr		Parameter für das Generieren der Verteilung
+Pat		Anzahl der am Ende gespeicherten Pattern
+
+HXC2:
+-----
+Tol.R		Rot-Komponente: Toleranz (für Pattern-Element A und B) bei Suche nach passenden Muster
+Tol.R		Rot-Komponente: Toleranz (für Pattern-Element C und D) bei Suche nach passenden Muster
+Tol.R		Rot-Komponente: Toleranz (für Pattern-Element E und F) bei Suche nach passenden Muster
+Tol.G		Grün-Komponente: Toleranz (für Pattern-Element A und B) bei Suche nach passenden Muster
+Tol.G		Grün-Komponente: Toleranz (für Pattern-Element C und D) bei Suche nach passenden Muster
+Tol.G		Grün-Komponente: Toleranz (für Pattern-Element E und F) bei Suche nach passenden Muster
+Tol.B		Blau-Komponente: Toleranz (für Pattern-Element A und B) bei Suche nach passenden Muster
+Tol.B		Blau-Komponente: Toleranz (für Pattern-Element C und D) bei Suche nach passenden Muster
+Tol.B		Blau-Komponente: Toleranz (für Pattern-Element E und F) bei Suche nach passenden Muster
+Incr		Parameter für das Generieren der Verteilung
+Pat		Anzahl der am Ende gespeicherten Pattern
+
+CoBaLP2:
+--------
+		Hinweis zu Prädiktionsmethoden: sT ... skip TM; sA ... skip Predictor A;
+			sB ... skip Predictor B; aR ... enable Predictor R
+constLines	1 ==> spezielle Verarbeitung von konstanten Zeilen und Spalten
+
+TSIP:
+-----
+Interleaving	Verschachtelung von Y, U und V, wenn keine Farb-Indizierung
+skipRLC1	Flag, 1=> überspringe RLC1
+skipRanking	Flag, 1=> überspringe MTF/IFC
+skipPrecoding_useZeroRLC2
+		erstes Flag: überspringe Präcodierung komplett
+		zweitesFlag: zähle nur Nullen als Lauflänge
+MTF/IFCreset	Parameter für MTF, wenn nächster Log-Wert fehlt
+		Parameter für IFC, wenn nächster Log-Wert vorhanden ist
+IFCmaxCount	Parameter für IFC
+SegmentWidth	Breite einer Kachel 
+SegmentHeight	Höhe einer Kachel (wirken sich nichtauf einen evtl. Prädiktion aus)
+blockWidth	Breite eines Blockes, wenn Prädiktion = ADAPT
+blockHeight	Höhe eines Blockes, wenn Prädiktion = ADAPT
+selectedPredictors
+		gewählte Prädiktoren, wenn Prädiktion = ADAPT
+RLC1fac_Y	Quotient = Anzahl Symbole nach RLC1 / vor RLC1
+marker_Y	Markersymbol für Lauflänge in RLC1
+RLC1fac_U	Quotient = Anzahl Symbole nach RLC1 / vor RLC1
+marker_U	Markersymbol für Lauflänge in RLC1
+RLC1fac_V	Quotient = Anzahl Symbole nach RLC1 / vor RLC1
+marker_V	Markersymbol für Lauflänge in RLC1
+RLC2fac_Y	Quotient = Anzahl Symbole nach RLC2 / vor RLC2
+marker_Y	Markersymbol für Lauflänge in RLC2
+RLC2fac_U	Quotient = Anzahl Symbole nach RLC2 / vor RLC2
+marker_U	Markersymbol für Lauflänge in RLC2
+RLC2fac_V	Quotient = Anzahl Symbole nach RLC2 / vor RLC2
+marker_V	Markersymbol für Lauflänge in RLC2
+Entropiecodierung	arithmetisch oder Huffman
+Entropiecodierung	gemeinsam für Symbole und Lauflängen oder separat
+
+LOCO:
+-----
+T4		Flag, beeinfluss Codierung
+
+BPC:
+-----
+s_flag		1 => Signifikanz-Info aus übergeordneten Bitebenen wird genutzt
+
+------------------------------------------------------------
+Dann kommen wieder Infos, die für alle Methoden gelten.
+
+Bytes:		Angaben darüber, wie viele Bytes für was ausgegeben wurden
+duration	Dauer der Kompression in Sekunden
+entropyY	Entropie der Y/R-Komponente (oder Index-Array bei Farb-Indizierung)
+entropyU	Entropie der U/G-Komponente
+entropyV	Entropie der V/B-Komponente
+
+Datum		Tag der Kompression

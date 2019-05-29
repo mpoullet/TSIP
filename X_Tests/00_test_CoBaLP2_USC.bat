@@ -1,0 +1,111 @@
+@echo off
+
+setlocal enabledelayedexpansion
+
+set EXE="..\bin\TSIPcoder_2_15i.exe"
+set PSNR="PSNR_C.exe"
+set logfile="log_CoBaLP2_auto_USC_215j.txt"
+set OutFile=tmpAuto_j_USC.tsip
+set res="res_CoBaLP2_autoColour_ABT_215j_USC.txt"
+set res_de="res_CoBaLP2j_USC_de.txt"
+set DIR="..\..\..\Texte\Paper\2015-CoBaLP2_colour\Investigations\"
+
+REM -method TSIP  -pred ADAPT -skip_rlc1 0 -RLC2_zeros 0 -entropy_coding 0 -predictors 111111 -blockWidth 100 -blockHeight 100 -o tmp.tsip -i C:\Users\Strutz\Documents\Daten\LOCO-I_colour2Test\Farbkreis_Itten_1961.ppm 
+
+REM "Supported options: \n");
+REM " -help 1 \n");
+REM  -i input_file (*.tsip, *.png, *.bmp, *.ppm, *pgm, ...)
+REM  -o output_file (*.tsip, *.png, *.bmp, *.ppm, *pgm, ...) 
+REM  -rct ( 0..119; colour space ) 
+REM  -Idx (1 ... use colour palette) 
+REM  -Idx_sorting (0 ... Idx_GRB; 1 ... Idx_Lum) 
+REM  -method (BPC, TSIP, LOCO, LOCO_T4, CoBaLP2, HXC) 
+REM  -histMode (comp, none, perm) 
+REM  -pred (none, LEFT, PAETH, MED, MEDPAETH, ADAPT, H26x) 
+REM ## BPC options ##  
+REM  -BPCauto (1 ... manual BPC settings will be ignored) 
+REM  -tol (0...1; tolerance for BPC coding) 
+REM  -tolOff1 (0...10; tolerance offset1 ) 
+REM  -tolOff2 (0...20; tolerance offset2 ) 
+REM  -BPCincreasefac (0...100; increase factor) 
+REM ## CoBaLP2 options ##  
+REM  -sT 1 (skip template matching) 
+REM  -sA 1 (skip predictor A) 
+REM  -sB 1 (skip predictor B) 
+REM  -aR 1 (enable predictor R) 
+REM ## TSIP options ##  
+REM  -segWidth  \n");
+REM  -segHeight \n");
+REM  -interleaving (Y_U_V, YY_uuvv, YY_uvuv, YuvYuv, YYuuvv) 
+REM  -skip_rlc1    (0 ... do not skip; 1 ... skip first run-length coding) 
+REM  -skip_prec    (0 ... do not skip; 1 ... skip entire pre-coding stage) 
+REM  -skip_postBWT (0 ... do not skip; 1 ... skip MTF/IFC) 
+REM  -postBWT (MTF, IFC) 
+REM  -MTF_val (0 ... 100) 
+REM  -IFCmax (1 ... 100) 
+REM  -IFCreset (1 ... 10000) 
+REM  -RLC2_zeros (1 ... combine zeros only) 
+REM  -entropy_coding (0... Huffman; 1 ... arithmetic) 
+REM  -separate (0... jointly coding; 1 ... separate coding 
+REM ADAPT prediction: 
+REM  -blockWidth  (5 - 128) 
+REM  -blockHeight (5 - 128) 
+REM  -predictors (100000 ... use first predictor) 
+REM              (010000 ... use second predictor) 
+REM              (110000 ... use two first predictors) 
+REM              (101000 ... use first and third predictor) 
+REM              (011000 ... use second and third predictor) 
+REM              (011111 ... use all predictors but first) 
+REM 
+
+
+REM check all images from the beginning
+set flag=1
+
+REM echo #Results > %res%
+
+REM ##################### Main Loop ##############################
+for  %%I in (                               
+	%DIR%Testimages_USC\*.png
+)do (
+
+ echo %%I
+REM  echo .
+REM  echo   %%I   >> %res%
+
+
+
+REM start with this images
+ if "%%I" == ".\Testimages_USC\sailboat_4.2.06.png" (
+ 	set flag=1
+  echo !flag!
+ )
+
+ if !flag! == 1 (
+
+ echo %%I
+ echo .
+ echo   %%I   >> %res%
+
+
+
+  %EXE% -i %%I  -o %OutFile%  -method CoBaLP2 -sT 0 -sA 0 -sB 0 -idx 0 -constlines 0 -histmode comp -tilewidth 99999 -tileheight 99999 -log_name %logfile% >> %res%
+REM %EXE% -i tmpUSC.tsip -o recoUSC.pgm  >> %res_de%
+REM %PSNR% -i1 %%I -i2 recoUSC.pgm  -p  >> %res%
+
+REM  del recoA.pgm
+ )
+
+REM ##### end of main loop #########
+)
+
+
+
+:ende
+
+
+
+
+pause
+
+REM@echo on
